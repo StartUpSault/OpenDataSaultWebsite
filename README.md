@@ -1,7 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Open Data Website is hosted on Heroku at:
+
+    https://fathomless-tundra-57713.herokuapp.com/
+
+Inspired from steps at:
+    https://devcenter.heroku.com/articles/getting-started-with-rails5
 
 Things you may want to cover:
 
