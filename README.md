@@ -25,4 +25,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Once master has been updated:
+
+    git push heroku master
