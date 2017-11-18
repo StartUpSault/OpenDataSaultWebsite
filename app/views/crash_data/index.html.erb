@@ -1,0 +1,95 @@
+
+    <div class="navbar navbar-inverse bg-inverse">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand">Open Data - Crash Data</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../">Home</a></li>
+      <li class="breadcrumb-item"><a href="../about/index">About</a></li>
+      <li class="breadcrumb-item active">Crash Data</li>
+    </ol>
+
+    <div class="album text-muted">
+      <div class="container whitebg">
+
+        <div class="row">
+          <div class="col-md-4">
+              <p>
+                <h4>Available sources</h4>
+                <ul>
+                    <li><a href="https://docs.google.com/spreadsheets/d/18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI/edit#gid=1514894429" target="_blank">Community contributed google worksheet</a>
+                    </li>
+                    <li><a href="https://spreadsheets.google.com/tq?&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">Download data</a></li>
+                    <li><a href="https://spreadsheets.google.com/tq?tqx=out:html&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">View data as table</a></li>
+                </ul>
+            </p>
+          </div>
+          <div class="col-md-8">
+            <h4>High level stats</h4>
+            <div class="card">
+                <div id="daysWithoutCrash"><h1>--</h1></div>
+                Days without crash
+            </div>
+            <div class="card">
+                <div id="lastCrashDate"><h1>--</h1></div>
+                Last crash date
+            </div>
+            <div class="card">
+                <div id="totalNumberOfCrashes"><h1>--</h1></div>
+                Total # of crashes
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">We need more data</h4>
+            <p>We are looking for partners who have access to this data or people who have some time and can look at public sources and feed data into our spreadsheet.</p>
+            <p class="mb-0">Any ideas or ways we can get data let us know via our Facebook group!</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Connect with us via Facebook: <a href="https://www.facebook.com/groups/138489013578977/">Sault Ste. Marie Open Data</a>.</p>
+        <p>Website codebase fully available at: <a href="https://github.com/StartUpSault/OpenDataSaultWebsite">Github</a>!</p>
+      </div>
+    </footer>
+
+    <script>
+    var spreadsheetId = "18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI",
+        url = "https://spreadsheets.google.com/feeds/list/" +
+              spreadsheetId +
+              "/1/public/values?alt=json";
+
+    $.get({
+      url: url,
+      success: function(response) {
+        console.log(response);
+        console.log("Number of crashes: " + response.feed.entry.length);
+        console.log("Date: " + JSON.stringify(response.feed.entry["0"].gsx$date.$t));
+        
+        var lastCrashDate = Date.parse(response.feed.entry["0"].gsx$date.$t);
+        console.log("LastCrashDate: " + lastCrashDate);
+        var currentDate = new Date();
+        console.log("Current Date: " + currentDate);
+        var timeDiff = Math.abs(currentDate.getTime() - lastCrashDate);
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
+        $("#daysWithoutCrash").html("<h1>"+diffDays+"</h1>");
+        $("#lastCrashDate").html("<h1>"+response.feed.entry["0"].gsx$date.$t+"</h1>");
+        $("#totalNumberOfCrashes").html("<h1>"+response.feed.entry.length+"</h1>");
+      }
+    });
+    </script>
