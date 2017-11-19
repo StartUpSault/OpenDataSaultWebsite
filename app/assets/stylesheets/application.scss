@@ -49,10 +49,18 @@ body {
 
 .card {
   float: left;
-  width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+}
+
+.cardHighlight {
+  float: left;
+  min-height: 120px;
+  padding: .75rem;
+  margin: 2rem;
+  border: 0;
+  background: #fff;
 }
 
 .card > img {

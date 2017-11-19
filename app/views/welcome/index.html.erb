@@ -1,23 +1,3 @@
-<div class="collapse bg-inverse" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 py-4">
-            <h4 class="text-white">Open Data - Sault Ste Marie</h4>
-            <p class="text-muted">
-            Site for gaining access to all Sault Ste Marie open data.
-            </p>
-          </div>
-          <div class="col-sm-4 py-4">
-            <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Follow on Twitter</a></li>
-              <li><a href="#" class="text-white">Like on Facebook</a></li>
-              <li><a href="#" class="text-white">Email me</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand">Open Data - Sault Ste Marie</a>
@@ -34,8 +14,8 @@
           We crowdsource data, get data from partners and encourage the use of data to benefit all people living or visiting Sault Ste. Marie!
         </p>
         <p>
-          <a href="#" class="btn btn-primary">See cool data</a>
-          <a href="#" class="btn btn-secondary">Request data</a>
+          <a href="https://www.facebook.com/groups/138489013578977/" class="btn btn-primary">Join FB Community</a>
+          <!-- Add feature for people to request data sets: <a href="#" class="btn btn-secondary">Request data</a>-->
         </p>
       </div>
     </section>
@@ -48,25 +28,29 @@
 
     <div class="album text-muted">
       <div class="container">
-
         <div class="row">
-          <div class="card">
-            <%= image_tag "carCrashData.jpg" %>
-            <p class="card-text">Accident data for Sault Ste. Marie aria.</p>
-            <a href="./crash_data/index" class="btn btn-primary">View data</a>
+          <div class="col-md-4">
+            <div class="card">
+              <%= image_tag "carCrashData.jpg" %>
+              <p class="card-text">Accident data for Sault Ste. Marie aria.</p>
+              <a href="./crash_data/index" class="btn btn-primary">View data</a>
+            </div>
           </div>
-          <div class="card">
-            <%= image_tag "PublicTransitData.jpg" %>
-            <p class="card-text">Details for public transit data in the city.</p>
-            <a href="#" class="btn btn-primary">View data</a>
+          <div class="col-md-4">
+            <div class="card">
+              <%= image_tag "PublicTransitData.jpg" %>
+              <p class="card-text">Details for public transit data in the city.</p>
+              <a href="#" class="btn btn-secondary">Coming soon</a>
+            </div>
           </div>
-          <div class="card">
-            <%= image_tag "ThumbNailTempData.svg" %>
-            <p class="card-text">Suggest, add or request data on something not here yet.</p>
-            <a href="#" class="btn btn-secondary">Request data</a>
+          <div class="col-md-4">
+            <div class="card">
+              <%= image_tag "Thumbnail.png" %>
+              <p class="card-text">Suggest or request data on something.</p>
+              <a href="#" class="btn btn-secondary">Coming soon</a>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
 
