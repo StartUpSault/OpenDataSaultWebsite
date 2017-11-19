@@ -31,17 +31,21 @@
           </div>
           <div class="col-md-8">
             <h4>High level stats</h4>
-            <div class="card">
+            <div class="cardHighlight">
                 <div id="daysWithoutCrash"><h1>--</h1></div>
                 Days without crash
             </div>
-            <div class="card">
+            <div class="cardHighlight">
                 <div id="lastCrashDate"><h1>--</h1></div>
                 Last crash date
             </div>
-            <div class="card">
+            <div class="cardHighlight">
                 <div id="totalNumberOfCrashes"><h1>--</h1></div>
                 Total # of crashes
+            </div>
+            <div class="cardHighlight">
+                <div id="totalCarsInvolved"><h1>--</h1></div>
+                Total # of cars
             </div>
           </div>
         </div>
@@ -76,20 +80,20 @@
     $.get({
       url: url,
       success: function(response) {
-        console.log(response);
-        console.log("Number of crashes: " + response.feed.entry.length);
-        console.log("Date: " + JSON.stringify(response.feed.entry["0"].gsx$date.$t));
-        
         var lastCrashDate = Date.parse(response.feed.entry["0"].gsx$date.$t);
-        console.log("LastCrashDate: " + lastCrashDate);
         var currentDate = new Date();
-        console.log("Current Date: " + currentDate);
         var timeDiff = Math.abs(currentDate.getTime() - lastCrashDate);
         var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
+        var totalVehicles = 0;
+        for(var i=0; i<response.feed.entry.length; i++) {
+            totalVehicles += parseInt(response.feed.entry[i].gsx$numberofvehicles.$t);
+        }
 
         $("#daysWithoutCrash").html("<h1>"+diffDays+"</h1>");
         $("#lastCrashDate").html("<h1>"+response.feed.entry["0"].gsx$date.$t+"</h1>");
         $("#totalNumberOfCrashes").html("<h1>"+response.feed.entry.length+"</h1>");
+        $("#totalCarsInvolved").html("<h1>"+totalVehicles+"</h1>");
       }
     });
     </script>
