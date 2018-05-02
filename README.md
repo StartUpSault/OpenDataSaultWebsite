@@ -7,7 +7,17 @@ This Open Data Website is hosted on Heroku at:
 Inspired from steps at:
     https://devcenter.heroku.com/articles/getting-started-with-rails5
 
-Things you may want to cover:
+Getting started information:
+
+* Running the app
+
+```
+bundle install
+```
+
+```
+rails server
+```
 
 * Ruby version
 
