@@ -20,6 +20,12 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  background: linear-gradient(120deg, #4e6cb3, #0b4b7d);
+  color: #FFFFFF;
+}
+
+.navbar a {
+  color: #FFFFFF;
 }
 
 .jumbotron {
@@ -93,4 +99,3 @@ footer p {
     border-radius: .25rem;
     background: #FFF;
 }
-
