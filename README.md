@@ -19,6 +19,13 @@ bundle install
 rails server
 ```
 
+* Making basic changes
+
+Rails has a caching mechanism for images. If they are edited at a file level make sure you clear the cache.
+```
+rake assets:clean
+```
+
 * Ruby version
 
 * System dependencies

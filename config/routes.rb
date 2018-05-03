@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+
+  get 'datasets/index'
+
+  get 'partners/index'
+
   get 'about/index'
 
   get 'crash_data/index'

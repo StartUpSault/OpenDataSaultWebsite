@@ -1,6 +1,6 @@
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand-header">Open Data - Sault Ste Marie</a>
+        <a href="#" class="navbar-brand-header">Soo Open Data</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,9 +10,8 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Using data for awesome stuff</h1>
-        <p class="lead text-muted">
-          We crowdsource data, get data from partners and encourage the use of data to benefit all people living or visiting Sault Ste. Marie!
-        </p>
+        <p class="lead call-to-action">We get data from crowdsourcing, partners and encourage the use of data to benefit all people in</p> 
+        <p class="lead call-to-action big-attention">Sault Ste. Marie!</p>
         <p>
           <a href="https://www.facebook.com/groups/138489013578977/" class="btn btn-primary">Join FB Community</a>
           <!-- Add feature for people to request data sets: <a href="#" class="btn btn-secondary">Request data</a>-->
@@ -23,22 +22,61 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">Home</li>
       <li class="breadcrumb-item"><a href="./about/index">About</a></li>
-      <li class="breadcrumb-item"><a href="./crash_data/index">Crash Data</a></li>
     </ol>
 
     <div class="album text-muted">
       <div class="container">
         <div class="row">
-          <h2>Data tracked to improve our city</h2>
+          <h2>Our success criteria</h2>
         </div>
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row plainBG">
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="itemTitle goalName">Partners</h3>
+              <div class="singleInner circleHighlight">
+              <div class="loading"></div>
+              <p class="goalValue progress-within_tolerance hasValue">
+                <a href="./partners/index">1</a>
+              </p>
+              <div class="goalIcon ss-bus hasIcon"></div>
+              <div class="goalProgress">
+                <div class="progressIcon progress-within_tolerance ss-right"></div>
+                </div><div class="goalHealth hide"><div class="icon ss-flag"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="itemTitle goalName">Datasets</h3>
+              <div class="singleInner circleHighlight">
+              <div class="loading"></div>
+              <p class="goalValue progress-within_tolerance hasValue">
+                <a href="./datasets/index">1</a>
+              </p>
+              <div class="goalIcon ss-bus hasIcon"></div>
+              <div class="goalProgress">
+                <div class="progressIcon progress-within_tolerance ss-right"></div>
+                </div><div class="goalHealth hide"><div class="icon ss-flag"></div>
+                </div>
+            </div>
+            </div>
           </div>
-          <div class="col-md-3">
-          </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
+            <div class="card">
+            <h3 class="itemTitle goalName">Projects</h3>
+            <div class="singleInner circleHighlight">
+            <div class="loading"></div>
+            <p class="goalValue progress-within_tolerance hasValue">
+              <a href="./projects/index">1</a>
+            </p>
+            <div class="goalIcon ss-bus hasIcon"></div>
+            <div class="goalProgress">
+              <div class="progressIcon progress-within_tolerance ss-right"></div>
+              </div><div class="goalHealth hide"><div class="icon ss-flag"></div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,22 +89,22 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "carCrashData.jpg" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "carCrashData.jpg", class: "img-fluid" %>
               <p class="card-text">Accident data for Sault Ste. Marie area.</p>
               <a href="./crash_data/index" class="btn btn-primary">View data</a>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "PublicTransitData.jpg" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "PublicTransitData.jpg", class: "img-fluid" %>
               <p class="card-text">Details for public transit data in the city.</p>
               <a href="#" class="btn btn-secondary">Coming soon</a>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "Thumbnail.png" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "Thumbnail.png", class: "img-fluid" %>
               <p class="card-text">Suggest or request data on something.</p>
               <a href="#" class="btn btn-secondary">Coming soon</a>
             </div>
