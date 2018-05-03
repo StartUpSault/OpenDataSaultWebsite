@@ -13,7 +13,6 @@
  */
 @import "bootstrap";
 
-
 body {
 
 }
@@ -34,7 +33,7 @@ body {
   padding-bottom: 6rem;
   margin-bottom: 0;
   color: #fff;
-  background-image: url(landing-bg.jpg);
+  background-image: asset_url('landing-bg.jpg');
 }
 
 .jumbotron p:last-child {
