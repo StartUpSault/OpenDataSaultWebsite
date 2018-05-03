@@ -22,7 +22,6 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">Home</li>
       <li class="breadcrumb-item"><a href="./about/index">About</a></li>
-      <li class="breadcrumb-item"><a href="./crash_data/index">Crash Data</a></li>
     </ol>
 
     <div class="album text-muted">
@@ -33,10 +32,12 @@
         <div class="row plainBG">
           <div class="col-md-4">
             <div class="card">
-              <h3 class="itemTitle goalName">Data Partners</h3>
+              <h3 class="itemTitle goalName">Partners</h3>
               <div class="singleInner circleHighlight">
               <div class="loading"></div>
-              <p class="goalValue progress-within_tolerance hasValue">1</p>
+              <p class="goalValue progress-within_tolerance hasValue">
+                <a href="./partners/index">1</a>
+              </p>
               <div class="goalIcon ss-bus hasIcon"></div>
               <div class="goalProgress">
                 <div class="progressIcon progress-within_tolerance ss-right"></div>
@@ -50,7 +51,9 @@
               <h3 class="itemTitle goalName">Datasets</h3>
               <div class="singleInner circleHighlight">
               <div class="loading"></div>
-              <p class="goalValue progress-within_tolerance hasValue">1</p>
+              <p class="goalValue progress-within_tolerance hasValue">
+                <a href="./datasets/index">1</a>
+              </p>
               <div class="goalIcon ss-bus hasIcon"></div>
               <div class="goalProgress">
                 <div class="progressIcon progress-within_tolerance ss-right"></div>
@@ -64,7 +67,9 @@
             <h3 class="itemTitle goalName">Projects</h3>
             <div class="singleInner circleHighlight">
             <div class="loading"></div>
-            <p class="goalValue progress-within_tolerance hasValue">1</p>
+            <p class="goalValue progress-within_tolerance hasValue">
+              <a href="./projects/index">1</a>
+            </p>
             <div class="goalIcon ss-bus hasIcon"></div>
             <div class="goalProgress">
               <div class="progressIcon progress-within_tolerance ss-right"></div>
@@ -84,22 +89,22 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "carCrashData.jpg" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "carCrashData.jpg", class: "img-fluid" %>
               <p class="card-text">Accident data for Sault Ste. Marie area.</p>
               <a href="./crash_data/index" class="btn btn-primary">View data</a>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "PublicTransitData.jpg" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "PublicTransitData.jpg", class: "img-fluid" %>
               <p class="card-text">Details for public transit data in the city.</p>
               <a href="#" class="btn btn-secondary">Coming soon</a>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <%= image_tag "Thumbnail.png" %>
+            <div class="card dataset-showcase">
+              <%= image_tag "Thumbnail.png", class: "img-fluid" %>
               <p class="card-text">Suggest or request data on something.</p>
               <a href="#" class="btn btn-secondary">Coming soon</a>
             </div>

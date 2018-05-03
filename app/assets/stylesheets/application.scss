@@ -26,6 +26,7 @@ body {
 
 .navbar a {
   color: #FFFFFF;
+  font-size: 3em;
 }
 
 .jumbotron {
@@ -121,6 +122,7 @@ footer p {
   font-size: 1.4em;
   margin-top: -3.6em !important;
   margin-bottom: 2.3em;
+  color: #000;
 }
 
 .singleInner .goalValue {
@@ -159,4 +161,8 @@ footer p {
 
 .plainBG {
   background: #fff;
+}
+
+.dataset-showcase {
+  min-height:380px;
 }
