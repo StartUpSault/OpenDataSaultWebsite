@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'elections/index'
+
   get 'projects/index'
 
   get 'datasets/index'
