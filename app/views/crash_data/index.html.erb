@@ -1,157 +1,114 @@
-<div class="header-most-top">
-  <div class="headder-nav-icon pagescrollfix">
-      <div class="container-fluid">
-        <div class="nav-headder-top">
-            <!--//navigation section -->
-            <nav class="navbar navbar-expand-lg navbar-light pagescrollfix shrink">
-              <div class="hedder-up">
-                  <h1><a class="navbar-brand" href="/">
-                  <span class="fas fa-cogs">
-                  </span>Soo Open Data</a></h1>
-              </div>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                  <ul class="navbar-nav ">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/about/index" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="/crash_data/index" class="nav-link">Car crashes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/elections/index" class="nav-link">Elections</a>
-                    </li>
-                  </ul>
-              </div>
-            </nav>
+<%= render "shared/header" %>
+
+<div class="album text-muted">
+  <div class="container whitebg">
+
+    <div class="row">
+        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">We need more data</h4>
+        <p>We are looking for partners who have access to this data or people who have some time and can look at public sources and feed data into our spreadsheet.</p>
+        <p class="mb-0">Any ideas or ways we can get data let us know via our <a href="https://www.facebook.com/groups/138489013578977/">Facebook group</a>!</p>
         </div>
-        <div class="clearfix"> </div>
+    </div>
+
+    <div class="row">
+        <h4>Available sources</h4>
+    </div>
+    <div class="row">
+        <ul>
+            <li><a href="https://docs.google.com/spreadsheets/d/18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI/edit#gid=1514894429" target="_blank">Community contributed google worksheet</a>
+            </li>
+            <li><a href="https://spreadsheets.google.com/tq?&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">Download data</a></li>
+            <li><a href="https://spreadsheets.google.com/tq?tqx=out:html&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">View data as table</a></li>
+        </ul>
+    </div>
+
+    <br />
+
+    <section class="fun-facts py-lg-4 py-md-3 py-sm-3 py-3">
+      <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+      <div class="row">
+          <div class="col-lg-4 funt-list-grids">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                  <h6><div id="daysWithoutCrash"><h1>--</h1></div></h6>
+                </div>
+                <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                <h4 class="mb-3">Days no crashes</h4>
+                </div>
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-3 funt-list-grids">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                  <h6><div id="lastCrashDate"><h1>--</h1></div></h6>
+                </div>
+                <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                  <h4 class="mb-3">Last crash date</h4>
+                </div>
+            </div>
+          </div>-->
+          <div class="col-lg-4 funt-list-grids">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                  <h6><div id="totalNumberOfCrashes"><h1>--</h1></div></h6>
+                </div>
+                <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                  <h4 class="mb-3"># of crashes</h4>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 funt-list-grids">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                  <h6><div id="totalCarsInvolved"><h1>--</h1></div></h6>
+                </div>
+                <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                  <h4 class="mb-3"># of cars</h4>
+                </div>
+            </div>
+        </div>
       </div>
+      </div>
+    </section>
+
+    <br />
+    <div class="row">
+        <div class="bd-callout bd-callout-warning">
+        <h4 id="conveying-meaning-to-assistive-technologies">How is data above generated?</h4>
+        <p>We query the Google drive worksheet via Ajax and calculate the above high level stats based on the data within it.<code class="highlighter-rouge">Update the worksheet</code> and the stats here will update in realtime. We will look to enhance the interesting stats we make available over time as we get more data from our community or open data partners.</p>
+        </div>
+    </div>
+
   </div>
 </div>
 
-    <div class="album text-muted">
-      <div class="container whitebg">
+<%= render "shared/footer" %>
 
-        <div class="row">
-            <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">We need more data</h4>
-            <p>We are looking for partners who have access to this data or people who have some time and can look at public sources and feed data into our spreadsheet.</p>
-            <p class="mb-0">Any ideas or ways we can get data let us know via our <a href="https://www.facebook.com/groups/138489013578977/">Facebook group</a>!</p>
-            </div>
-        </div>
+<script>
+var spreadsheetId = "18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI",
+    url = "https://spreadsheets.google.com/feeds/list/" +
+          spreadsheetId +
+          "/1/public/values?alt=json";
 
-        <div class="row">
-            <h4>Available sources</h4>
-        </div>
-        <div class="row">
-            <ul>
-                <li><a href="https://docs.google.com/spreadsheets/d/18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI/edit#gid=1514894429" target="_blank">Community contributed google worksheet</a>
-                </li>
-                <li><a href="https://spreadsheets.google.com/tq?&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">Download data</a></li>
-                <li><a href="https://spreadsheets.google.com/tq?tqx=out:html&tq=&key=18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI&gid=2" target="_blank">View data as table</a></li>
-            </ul>
-        </div>
+$.get({
+  url: url,
+  success: function(response) {
+    var lastCrashDate = Date.parse(response.feed.entry["0"].gsx$date.$t);
+    var currentDate = new Date();
+    var timeDiff = Math.abs(currentDate.getTime() - lastCrashDate);
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
-        <br />
+    var totalVehicles = 0;
+    for(var i=0; i<response.feed.entry.length; i++) {
+        totalVehicles += parseInt(response.feed.entry[i].gsx$numberofvehicles.$t);
+    }
 
-        <section class="fun-facts py-lg-4 py-md-3 py-sm-3 py-3">
-          <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-          <div class="row">
-              <div class="col-lg-4 funt-list-grids">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
-                      <h6><div id="daysWithoutCrash"><h1>--</h1></div></h6>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
-                    <h4 class="mb-3">Days no crashes</h4>
-                    </div>
-                </div>
-              </div>
-              <!--
-              <div class="col-lg-3 funt-list-grids">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
-                      <h6><div id="lastCrashDate"><h1>--</h1></div></h6>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
-                      <h4 class="mb-3">Last crash date</h4>
-                    </div>
-                </div>
-              </div>-->
-              <div class="col-lg-4 funt-list-grids">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
-                      <h6><div id="totalNumberOfCrashes"><h1>--</h1></div></h6>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
-                      <h4 class="mb-3"># of crashes</h4>
-                    </div>
-                </div>
-              </div>
-              <div class="col-lg-4 funt-list-grids">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
-                      <h6><div id="totalCarsInvolved"><h1>--</h1></div></h6>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
-                      <h4 class="mb-3"># of cars</h4>
-                    </div>
-                </div>
-            </div>
-          </div>
-          </div>
-        </section>
-
-        <br />
-        <div class="row">
-            <div class="bd-callout bd-callout-warning">
-            <h4 id="conveying-meaning-to-assistive-technologies">How is data above generated?</h4>
-            <p>We query the Google drive worksheet via Ajax and calculate the above high level stats based on the data within it.<code class="highlighter-rouge">Update the worksheet</code> and the stats here will update in realtime. We will look to enhance the interesting stats we make available over time as we get more data from our community or open data partners.</p>
-            </div>
-        </div>
-
-      </div>
-    </div>
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Connect with us via Facebook: <a href="https://www.facebook.com/groups/138489013578977/">Sault Ste. Marie Open Data</a>.</p>
-        <p>Website codebase fully available at: <a href="https://github.com/StartUpSault/OpenDataSaultWebsite">Github</a>!</p>
-      </div>
-    </footer>
-
-    <script>
-    var spreadsheetId = "18w6F4AE2ZEtYPbS2orRmQnR1S7BUBhnNo8u-cWyesAI",
-        url = "https://spreadsheets.google.com/feeds/list/" +
-              spreadsheetId +
-              "/1/public/values?alt=json";
-
-    $.get({
-      url: url,
-      success: function(response) {
-        var lastCrashDate = Date.parse(response.feed.entry["0"].gsx$date.$t);
-        var currentDate = new Date();
-        var timeDiff = Math.abs(currentDate.getTime() - lastCrashDate);
-        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-
-        var totalVehicles = 0;
-        for(var i=0; i<response.feed.entry.length; i++) {
-            totalVehicles += parseInt(response.feed.entry[i].gsx$numberofvehicles.$t);
-        }
-
-        $("#daysWithoutCrash").html("<h1>"+diffDays+"</h1>");
-        $("#lastCrashDate").html("<h1>"+response.feed.entry["0"].gsx$date.$t+"</h1>");
-        $("#totalNumberOfCrashes").html("<h1>"+response.feed.entry.length+"</h1>");
-        $("#totalCarsInvolved").html("<h1>"+totalVehicles+"</h1>");
-      }
-    });
-    </script>
+    $("#daysWithoutCrash").html("<h1>"+diffDays+"</h1>");
+    $("#lastCrashDate").html("<h1>"+response.feed.entry["0"].gsx$date.$t+"</h1>");
+    $("#totalNumberOfCrashes").html("<h1>"+response.feed.entry.length+"</h1>");
+    $("#totalCarsInvolved").html("<h1>"+totalVehicles+"</h1>");
+  }
+});
+</script>
