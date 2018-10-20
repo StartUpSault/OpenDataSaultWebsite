@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'get_involved/index'
+
   get 'elections/index'
 
   get 'projects/index'
