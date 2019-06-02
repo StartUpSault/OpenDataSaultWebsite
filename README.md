@@ -9,6 +9,12 @@ Inspired from steps at:
 
 Getting started information:
 
+# Getting started
+
+## Windows
+
+http://railsinstaller.org/en <- run the installer. Choose rails version 5.1
+
 * Running the app
 
 ```
